@@ -12,10 +12,10 @@ export default function Calendar() {
   const defaultSelected: DateRange = {
     from: pastMonth,
     to: addDays(pastMonth, 0),
-  };
+  };let footer = <p>Выберите период отпуска сотрудника</p>;
   const [range, setRange] = useState<DateRange | undefined>(defaultSelected);
 
-  let footer = <p>Выберите период отпуска сотрудника</p>;
+  
   if (range?.from) {
     if (!range.to) {
       footer = <p>{format(range.from, "PPP")}</p>;

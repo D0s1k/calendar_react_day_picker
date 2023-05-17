@@ -1,3 +1,56 @@
 .button {
-  background-color: linear-gradient(#0D8BFF 100%, #4BA9FF 100%, #85C5FF 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 12px;
+  margin-left: 120px;
+  width: 100px;
+  height: 28px;
+  left: calc(50% - 50px);
+  bottom: 8px;
+  color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0d8bff), color-stop(53.65%, #4ba9ff), to(#85c5ff));
+  background: -o-linear-gradient(top, #0d8bff 0%, #4ba9ff 53.65%, #85c5ff 100%);
+  background: linear-gradient(180deg, #0d8bff 0%, #4ba9ff 53.65%, #85c5ff 100%);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.save_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  margin-left: 120px;
+  width: 100px;
+  height: 28px;
+  left: calc(50% - 50px);
+  bottom: 8px;
+  color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0d8bff), color-stop(53.65%, #4ba9ff), to(#85c5ff));
+  background: -o-linear-gradient(top, #0d8bff 0%, #4ba9ff 53.65%, #85c5ff 100%);
+  background: linear-gradient(180deg, #0d8bff 0%, #4ba9ff 53.65%, #85c5ff 100%);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }

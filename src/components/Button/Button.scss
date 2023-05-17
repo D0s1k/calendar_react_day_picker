@@ -1,3 +1,32 @@
-.button{
-    background-color: linear-gradient(#0D8BFF 100%, #4BA9FF 100%, #85C5FF 100% );
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 12px;
+  margin-left: 120px;
+  width: 100px;
+  height: 28px;
+  left: calc(50% - 100px / 2);
+  bottom: 8px;
+  color: #ffffff;
+  background: linear-gradient(180deg, #0d8bff 0%, #4ba9ff 53.65%, #85c5ff 100%);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.save_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    margin-left: 120px;
+    width: 100px;
+    height: 28px;
+    left: calc(50% - 100px / 2);
+    bottom: 8px;
+    color: #ffffff;
+    background: linear-gradient(180deg, #0d8bff 0%, #4ba9ff 53.65%, #85c5ff 100%);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
