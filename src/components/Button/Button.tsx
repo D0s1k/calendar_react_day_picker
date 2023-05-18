@@ -28,11 +28,11 @@ const ModalButton: React.FC = () => {
         Статус
       </button>
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-        <Header />
-        <button className="close_button" onClick={handleCloseModal} />
+        <Header>
+          <button className="close_button" onClick={handleCloseModal} />
+        </Header>
         <Calendar selectedDays={selectedDays} onSelect={handleSelectRange} />
-        <SaveButton className="save_button" onSave={handleCloseModal}/>
-        
+        <SaveButton className="save_button" onSave={handleCloseModal} />
       </Modal>
     </div>
   );

@@ -1,14 +1,17 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import "./css/Header.css"
 
-
-const Header: React.FC = () => {
-
-    return(
-        <div className="header">
-            <h4 >Календарь</h4>
-        </div>
-    );
+interface HeaderProps {
+  children: ReactNode;
 }
 
-export default Header
+const Header: React.FC<HeaderProps> = ({ children }) => {
+  return (
+    <div className="header">
+      <h4>Календарь</h4>
+      {children}
+    </div>
+  );
+}
+
+export default Header;

@@ -10,6 +10,65 @@
   margin: 1em;
 }
 
+.rdp-caption_label {
+  text-transform: capitalize;
+}
+
+.rdp-head {
+  text-transform: capitalize;
+}
+
+.footer {
+  text-transform: capitalize;
+}
+
+.rdp-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.rdp-nav_button_previous {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.rdp-nav_button_next {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.rdp-caption_label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0 0.25em;
+  white-space: nowrap;
+  color: currentColor;
+  border: 0;
+  border: 2px solid transparent;
+  font-family: inherit;
+  font-size: var(--rdp-caption-font-size);
+  font-weight: bold;
+}
+
 .rdp-nav_button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -23,12 +82,8 @@
   width: var(--rdp-cell-size);
   height: var(--rdp-cell-size);
   padding: 0.25em;
-  border-radius: 100%;
   background-color: #fff;
-}
-
-.rdp-showOutsideDays {
-  color: #151B26 44%;
+  border-radius: 100%;
 }
 
 .rdp-button {
@@ -39,8 +94,8 @@
   cursor: pointer;
 }
 
-.rdp-day_today:not(.rdp-day_outside) {
-  font-weight: bold;
+.rdp-button_reset.rdp-button.rdp-day.rdp-day_outside {
+  color: rgba(0, 0, 0, 0.2901960784);
 }
 
 .rdp-weeknumber, .rdp-day {
@@ -67,6 +122,7 @@
 
 .rdp-day_selected, .rdp-day_selected:focus-visible, .rdp-day_selected:hover {
   color: white;
+  font-weight: bold;
   opacity: 1;
   background-color: var(--rdp-accent-color);
 }
@@ -78,13 +134,4 @@
 .rdp-day_range_middle {
   border-radius: 100%;
   background: #1890FF 15%;
-}
-
-.markdown {
-  --ifm-h1-vertical-rhythm-top: 3;
-  --ifm-h2-vertical-rhythm-top: 2;
-  --ifm-h3-vertical-rhythm-top: 1.5;
-  --ifm-heading-vertical-rhythm-top: 1.25;
-  --ifm-h1-vertical-rhythm-bottom: 1.25;
-  --ifm-heading-vertical-rhythm-bottom: 1;
 }
