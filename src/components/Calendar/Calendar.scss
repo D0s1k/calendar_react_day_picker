@@ -21,6 +21,10 @@
     background-color: #fff;
 }
 
+.rdp-showOutsideDays{
+    color:#151B26 44%;
+}
+
 .rdp-button {
     border: 2px solid transparent;
 }
@@ -59,19 +63,19 @@
     border-radius: 100%;
 }
 
-.rdp:not([dir='rtl']) .rdp-day_range_start {
-    border-radius: 100%;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
+// .rdp:not([dir='rtl']) .rdp-day_range_start {
+//     border-radius: 100%;
+//     border-top-right-radius: 0;
+//     border-bottom-right-radius: 0;
+// }
 
-.rdp:not([dir='rtl']) .rdp-day_range_end {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
+// .rdp:not([dir='rtl']) .rdp-day_range_end {
+//     border-top-left-radius: 0;
+//     border-bottom-left-radius: 0;
+// }
 
 .rdp-day_range_middle {
-    border-radius: 0;
+    border-radius: 100%;
     background: #1890FF 15%;
 }
 

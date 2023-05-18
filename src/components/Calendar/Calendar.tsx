@@ -1,28 +1,29 @@
-import React, { useState } from "react";
-
+import React from "react";
 import "./Calendar.scss";
-
 import { addDays, format } from "date-fns";
 import { ru } from "date-fns/locale";
-import { DateRange, DayPicker } from "react-day-picker";
+import { DateRange, DayPicker, SelectRangeEventHandler } from "react-day-picker";
 
-const pastMonth = new Date();
+interface CalendarProps {
+  selectedDays: DateRange | undefined;
+  onSelect: SelectRangeEventHandler;
+}
 
-export default function Calendar() {
+const Calendar: React.FC<CalendarProps> = ({ selectedDays, onSelect }) => {
+  const pastMonth = new Date();
   const defaultSelected: DateRange = {
     from: pastMonth,
     to: addDays(pastMonth, 0),
-  };let footer = <p>Выберите период отпуска сотрудника</p>;
-  const [range, setRange] = useState<DateRange | undefined>(defaultSelected);
+  };
 
-  
-  if (range?.from) {
-    if (!range.to) {
-      footer = <p>{format(range.from, "PPP")}</p>;
-    } else if (range.to) {
+  let footer = <p>Выберите период отпуска сотрудника</p>;
+  if (selectedDays?.from) {
+    if (!selectedDays.to) {
+      footer = <p>{format(selectedDays.from, "PPP")}</p>;
+    } else if (selectedDays.to) {
       footer = (
         <p>
-          {format(range.from, "PPP")} - {format(range.to, "PPP")}
+          {format(selectedDays.from, "PPP")} - {format(selectedDays.to, "PPP")}
         </p>
       );
     }
@@ -31,12 +32,17 @@ export default function Calendar() {
   return (
     <DayPicker
       locale={ru}
+      ISOWeek 
+      showOutsideDays
       id="test"
+      max={40}
       mode="range"
       captionLayout="dropdown-buttons"
-      selected={range}
+      selected={selectedDays || defaultSelected}
       footer={footer}
-      onSelect={setRange}
+      onSelect={onSelect}
     />
   );
 }
+
+export default Calendar;

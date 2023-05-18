@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,6 +25,17 @@
   background: linear-gradient(180deg, #0d8bff 0%, #4ba9ff 53.65%, #85c5ff 100%);
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.close_button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#0d8bff), color-stop(53.65%, #4ba9ff), to(#85c5ff));
+  background: -o-linear-gradient(top, #0d8bff 0%, #4ba9ff 53.65%, #85c5ff 100%);
+  background: linear-gradient(180deg, #0d8bff 0%, #4ba9ff 53.65%, #85c5ff 100%);
+}
+
+.close_button:before {
+  content: "✕";
+  color: #000000;
 }
 
 .save_button {
